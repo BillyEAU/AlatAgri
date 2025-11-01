@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laporan - AlatAgri</title>
-    <link rel="stylesheet" href="dashboard-styles.css"> 
+    <link rel="stylesheet" href="dashboard-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
     <div class="dashboard-container">
         <aside class="sidebar">
@@ -15,8 +17,9 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="dashboard.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
-                    <li class="active"><a href="laporan.html"><i class="fas fa-chart-bar"></i> Laporan</a></li>
+                    <li><a href="dashboardPenjual.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li class="active"><a href="laporanPenjual.php"><i class="fas fa-chart-bar"></i> Laporan</a></li>
+                    <li><a href="index.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                 </ul>
             </nav>
         </aside>
@@ -53,7 +56,9 @@
                         <option>Alat Pertanian</option>
                     </select>
                 </div>
-                <button class="btn-filter">Terapkan Filter</button>
+                <button onclick="myFunction()" class="btn-filter">Terapkan Filter</button>
+                <button onclick="" class="btn-filter">Tambahkan Penjualan</button>
+                <div id="snackbar">Data telah diterapkan</div>
             </section>
 
             <section class="report-table">
@@ -101,10 +106,14 @@
                             <td>1</td>
                             <td>Rp 750.000</td>
                         </tr>
-                        </tbody>
+                    </tbody>
                 </table>
             </section>
         </main>
     </div>
 </body>
+<script src="script.js">
+
+</script>
+
 </html>

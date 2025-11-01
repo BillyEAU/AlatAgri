@@ -31,7 +31,7 @@
             </form>
             
             <div class="extra-links">
-                <a href="login.html">Sudah punya akun? Login</a>
+                <a href="login.php">Sudah punya akun? Login</a>
             </div>
         </div>
     </div>

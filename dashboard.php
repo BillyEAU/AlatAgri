@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,8 @@
             <nav class="sidebar-nav">
                 <ul>
                     <li class="active"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
-                    <li><a href="laporan.html"><i class="fas fa-chart-bar"></i> Laporan</a></li>
+                    <li><a href="laporan.php"><i class="fas fa-chart-bar"></i> Laporan</a></li>
+                    <li><a href="index.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                 </ul>
             </nav>
         </aside>
@@ -76,6 +78,21 @@
                 </table>
             </section>
         </main>
+        
     </div>
 </body>
+<script>
+    // popup
+    const logOut = document.getElementById('logout-btn');
+    // event
+    logOut.addEventListener('click', function() {
+    const pilihan = confirm('Ingin ke halaman Index?');
+    if (pilihan == false){
+        alert('Pengguna membatalkan')
+        event.preventDefault();
+    } else {
+        console.log('Mengalihkan Anda ke Index');
+    }
+});
+</script>
 </html>

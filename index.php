@@ -17,7 +17,7 @@
                 <li><a href="#">Produk</a></li>
                 <li><a href="#">Pelayanan Kami</a></li>
                 <li><a href="#">Kontak</a></li>
-                <li><a href="login.html" class="btn_signin">Sign In</a></li>
+                <li><a href="login.php" class="btn_signin">Sign In</a></li>
             </ul>
         </nav>
     </header>
@@ -71,4 +71,7 @@
     </footer>
 
 </body>
+<script src="script.js">
+
+</script>
 </html>
