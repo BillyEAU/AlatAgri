@@ -12,10 +12,10 @@
         <div class="auth-box">
             <h1 class="title">AlatAgri</h1>
             
-            <form class="auth-form login-form" method="POST" id="loginForm">
-                <input type="text" id="UserInput" name="UserInput" placeholder="Masukan Username" required>
-                <input type="password" id="PassInput" name="PassInput" placeholder="Masukan Password" required>
-                <button class="btn-auth" type="submit" name="login">Login</button>
+            <form class="auth-form login-form" action="login_proses.php" method="POST">
+                <input type="text" id="username" name="username" placeholder="Masukan Username" required>
+                <input type="text" id="password" name="password" placeholder="Masukan Password" required>
+                <button class="btn-auth" type="submit" name="login" id="login">Login</button>
             </form>
             
             <div class="extra-links">
@@ -24,28 +24,7 @@
             </div>
         </div>
     </div>
-    <?php
-    $penjual = "aron";
-    $admin = "admin";
-    $passwordAdmin = "adminadmin";
-    $password = "123";
-
-    if(isset($_POST['login'])){
-        $userInput = $_POST['UserInput'];
-        $passInput = $_POST['PassInput'];
-
-        if($userInput === $penjual && $passInput === $password){
-            header("Location: dashboardPenjual.php");
-            exit;
-        } else if($userInput === $admin && $passInput === $passwordAdmin) {
-            header("Location: dashboard.php");
-            exit;
-        }
-        else {
-            echo "<script>alert('Username atau Password salah');</script>";
-        }
-    }
-    ?>
+    
 </body>
 <script>
     // popup

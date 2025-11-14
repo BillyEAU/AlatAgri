@@ -55,6 +55,12 @@ body {
     color: #2c3e50;
 }
 
+.sidebar-nav ul li.kelola a,
+.sidebar-nav ul li a:hover {
+    background-color: white;
+    color: #2c3e50;
+}
+
 .main-content {
     flex-grow: 1;
     padding: 2rem;

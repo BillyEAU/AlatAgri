@@ -18,6 +18,7 @@
                 <ul>
                     <li class="active"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
                     <li><a href="laporan.php"><i class="fas fa-chart-bar"></i> Laporan</a></li>
+                    <li><a href="kelolaPenjual.php"><i class="fas fa-chart-bar"></i> Kelola Penjual</a></li>
                     <li><a href="index.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                 </ul>
             </nav>
