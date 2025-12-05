@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - AlatAgri</title>
-    <link rel="stylesheet" href="masuk-styles.css">
+    <link rel="stylesheet" href="css/masuk-styles.css">
 </head>
 <body>
     <div class="auth-container">

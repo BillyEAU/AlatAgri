@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laporan - AlatAgri</title>
-    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="../css/dashboard-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
@@ -17,9 +19,10 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="dashboardPenjual.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
-                    <li class="active"><a href="laporanPenjual.php"><i class="fas fa-chart-bar"></i> Laporan</a></li>
-                    <li><a href="index.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                    <li><a href="dashboard.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li class="active"><a href="laporan.php"><i class="fas fa-chart-bar"></i> Laporan</a></li>
+                    <li class="kelola"><a href="../dashboard/kelolaPenjual.php"><i class="fas fa-chart-bar"></i> Kelola Penjual</a></li>
+                    <li><a href="../index.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                 </ul>
             </nav>
         </aside>
@@ -28,7 +31,7 @@
             <header class="main-header">
                 <div class="header-left">
                     <i class="fas fa-bars menu-toggle"></i>
-                    <h2>Laporan Penjualan</h2>
+                    <h2>Laporan Seluruh Penjualan</h2>
                 </div>
                 <div class="header-right">
                     <div class="location-dropdown">
@@ -57,7 +60,6 @@
                     </select>
                 </div>
                 <button onclick="myFunction()" class="btn-filter">Terapkan Filter</button>
-                <button onclick="" class="btn-filter">Tambahkan Penjualan</button>
                 <div id="snackbar">Data telah diterapkan</div>
             </section>
 
@@ -112,7 +114,7 @@
         </main>
     </div>
 </body>
-<script src="script.js">
+<script src="../script.js">
 
 </script>
 
