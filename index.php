@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +18,13 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Tentang Kami</a></li>
-                <li><a href="produk.php">Produk</a></li>
+                <li><a href="produk.php" id="tanya">Produk</a></li>
                 <li><a href="#">Pelayanan Kami</a></li>
                 <li><a href="#">Kontak</a></li>
                 <li><a href="login.php" class="btn_signin">Sign In</a></li>
             </ul>
         </nav>
+        
     </header>
 
     <main>

@@ -55,7 +55,7 @@ if (mysqli_num_rows($query) < 1) {
                     <li class="<?php echo ($now == 'dashboardPenjual.php') ?' active' : '';?>"><a href="dashboardPenjual.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
                     <li class="<?php echo ($now == 'laporanPenjual.php') ?' active' : '';?>"><a href="laporanPenjual.php"><i class="fas fa-chart-bar"></i> Laporan</a></li>
                     <li class="<?php echo ($now == 'kelolaProduk.php') ?' active' : '';?>"><a href="kelolaProduk.php"><i class="fas fa-chart-bar"></i> Produk</a></li>
-                    <li><a href="../index.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                    <li><a href="../logout.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                 </ul>
             </nav>
         </aside>

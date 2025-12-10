@@ -22,7 +22,7 @@
                     <li><a href="dashboard.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
                     <li class="active"><a href="laporan.php"><i class="fas fa-chart-bar"></i> Laporan</a></li>
                     <li class="kelola"><a href="../dashboard/kelolaPenjual.php"><i class="fas fa-chart-bar"></i> Kelola Penjual</a></li>
-                    <li><a href="../index.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                    <li><a href="../logout.php" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                 </ul>
             </nav>
         </aside>
@@ -58,8 +58,13 @@
                         <option>Enzim</option>
                         <option>Alat Pertanian</option>
                     </select>
-                </div>
+                </div>      
                 <button onclick="myFunction()" class="btn-filter">Terapkan Filter</button>
+                <form action="../pembelian/pembelian-cetak.php">
+                   <button class="btn-filter">
+                   cetak
+                   </button>
+                </form>
                 <div id="snackbar">Data telah diterapkan</div>
             </section>
 
@@ -67,47 +72,49 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>ID Pesanan</th>
-                            <th>Tanggal</th>
-                            <th>Nama Produk</th>
-                            <th>Kategori</th>
-                            <th>Jumlah</th>
-                            <th>Total Harga</th>
+                            <th>Pembeli</th>
+                            <th>Nomor Hp</th>
+                            <th>Total</th>
+                            <th>Alamat</th>
+                            <th>Kurir</th>
+                            <th>Resi</th>
+                            <th>Status</th>
+                            <th>Tanggal Pembelian</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        include '../koneksi.php';
+                        $sql = "
+                            SELECT 
+                                *
+                            FROM 
+                                tbl_pembelian 
+                            ";
+					$result = mysqli_query($koneksi, $sql);
+					if (mysqli_num_rows($result) == 0) {
+						echo "
                         <tr>
-                            <td>#00124</td>
-                            <td>05 Okt 2025</td>
-                            <td>Pupuk Organik</td>
-                            <td>Pupuk</td>
-                            <td>10</td>
-                            <td>Rp 500.000</td>
+                            <td colspan='10' align='center'>
+                                    Data Kosong
+                                    </td>
                         </tr>
+                            ";
+                                }
+                        while ($data = mysqli_fetch_assoc($result)) {
+						echo "
                         <tr>
-                            <td>#00125</td>
-                            <td>04 Okt 2025</td>
-                            <td>Rennet</td>
-                            <td>Enzim</td>
-                            <td>5</td>
-                            <td>Rp 250.000</td>
+                            <td>$data[nama_user]</td>
+                            <td>$data[nomor_hp]</td>
+                            <td>$data[total_harga]</td>
+                            <td>$data[alamat_pengiriman]</td>
+                            <td>$data[kurir]</td>
+                            <td>$data[resi]</td>
+                            <td>$data[status_pembelian]</td>
+                            <td>$data[tgl_pembelian]</td>
                         </tr>
-                        <tr>
-                            <td>#00126</td>
-                            <td>04 Okt 2025</td>
-                            <td>Pupuk Anorganik</td>
-                            <td>Pupuk</td>
-                            <td>20</td>
-                            <td>Rp 1.000.000</td>
-                        </tr>
-                        <tr>
-                            <td>#00127</td>
-                            <td>03 Okt 2025</td>
-                            <td>Sewa Traktor</td>
-                            <td>Alat Pertanian</td>
-                            <td>1</td>
-                            <td>Rp 750.000</td>
-                        </tr>
+                        ";
+                        }?>
                     </tbody>
                 </table>
             </section>

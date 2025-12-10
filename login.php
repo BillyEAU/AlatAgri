@@ -14,7 +14,7 @@
             
             <form class="auth-form login-form" action="login_proses.php" method="POST">
                 <input type="text" id="username" name="username" placeholder="Masukan Username" required>
-                <input type="text" id="password" name="password" placeholder="Masukan Password" required>
+                <input type="password" id="password" name="password" placeholder="Masukan Password" required>
                 <button class="btn-auth" type="submit" name="login" id="login">Login</button>
             </form>
             

@@ -1,5 +1,5 @@
 // popup
-const signIn = document.querySelector('.btn_signin');
+// const signIn = document.querySelector('.btn_signin');
 // event
 signIn.addEventListener('click', function() {
     const pilihan = confirm('Ingin ke halaman Login?');
@@ -11,6 +11,27 @@ signIn.addEventListener('click', function() {
     }
 });
 
+console.log("User login : ", sip);
+const beli = document.querySelectorAll('.card1');
+if (beli.length > 0){
+    beli.forEach(card => {
+        card.addEventListener('click', function(event){
+            console.log('Tekan');
+            if(sip === 'false'){
+                event.preventDefault();
+                const pilih = confirm('Login terlebih dahulu');
+                if(pilih === true){
+                    window.location.href = 'login.php';
+                } else{
+                    console.log('User membatalkan login');
+                }
+            } else{
+                const namaProudk = this.querySelector('h1').innerText;
+                alert('Berhasil memilih produk: ' + namaProduk + '. (Logika pembelian bisa ditambah disini)');
+            }
+        });
+    });
+}
 
 const navList = document.querySelector('nav ul');
 const serviceLink = navList.children[3];

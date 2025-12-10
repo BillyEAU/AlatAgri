@@ -19,15 +19,8 @@ if(isset($_POST['login'])) {
             $_SESSION['logged_in'] = true;
             switch($_SESSION['role']){
               case 'admin':
-                $id_user_sekarang = $row['id_user'];
-                $cek_penjual = mysqli_query($koneksi, "SELECT id_penjual FROM tbl_penjual WHERE id_user = '$id_user_saat_ini'");
-                if($data_penjual = mysqli_fetch_assoc($cek_penjual)){
-                    $_SESSION['id_penjual'] = $data_penjual['id_penjual']; // Ini akan bernilai 1
-                } else {
-                    // Jaga-jaga jika user sudah daftar tapi belum bikin toko
-                    echo "<script>alert('Akun anda belum terdaftar sebagai penjual!'); window.location='login.php';</script>";
-                    exit();
-                }
+                // $id_user_sekarang = $row['id_user'];
+                $_SESSION['id_admin'] = $row['id_user'];
                 header('location:dashboard/dashboard.php');
                 break;
               case 'penjual':
